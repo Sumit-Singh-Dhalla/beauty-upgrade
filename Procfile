@@ -1,0 +1,1 @@
+web: gunicorn beaut_upgrade.wsgi --log-file -

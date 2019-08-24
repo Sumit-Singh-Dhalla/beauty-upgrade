@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from newApp.views import index
 
 urlpatterns = [
+    url(r'home', index),
     url(r'^admin/', admin.site.urls),
-    url(r'', index),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

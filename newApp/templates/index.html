@@ -139,33 +139,39 @@
 			<br>
 			<div class="row bg-light">
 				<div class="col">
-					<form>
+					<form name="reservation-form" action="#" onsubmit="reservation();return false">
 						<div class="form-row">
 						  	<div class="form-group col-6">
 						  		<h3>Reserve</h3>
 						  		<label for="inputDate"> Date</label>
-						  		<input type="date" class="form-control" id="inputDate" placeholder="Data gg/mm/aaaa">
+						  		<input type="text" class="form-control" id="inputDate" placeholder="yyyy/mm/dd"
+								name="date" required>
 						  	</div>
 						  	<div class="form-group col-6">
 						  		<h3>Details</h3>
 						  		<label for="inputName"> Name</label>
-						  		<input type="text" class="form-control" id="inputName" placeholder="Name">
+						  		<input type="text" class="form-control" id="inputName" placeholder="Name"
+								name="name" required>
 						  	</div>
 						  	<div class="form-group col-6">
 						  		<label for="inputTime"> Timetables</label>
-						  		<input type="time" class="form-control" id="inputTime" placeholder="Timetables">
+						  		<input type="text" class="form-control" id="inputTime" placeholder="HH:MM AM/PM"
+								name="time" required>
 						  	</div>
 						  	<div class="form-group col-6">
 						  		<label for="inputEmail"> Email</label>
-						  		<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+						  		<input type="email" class="form-control" id="inputEmail" placeholder="Email"
+								name="email" required>
 						  	</div>
 						  	<div class="form-group col-6">
 						  		<label for="inputCel"> Phone</label>
-						  		<input type="tel" class="form-control" id="inputCel" placeholder="Phone">
+						  		<input type="tel" class="form-control" id="inputCel" placeholder="Phone"
+								name="phone" required>
 						  	</div>
   							<div class="form-group col-12">
-  								<label for="inputComment"> Further requests</label>
-								<textarea class="form-control" rows="4" id="inputComment" placeholder="Further requests"></textarea>
+  								<label for="inputComment"> Description</label>
+								<textarea class="form-control" rows="4" id="inputComment" name="description"
+										  placeholder="Want Booking for Threading" required></textarea>
 							</div>
 					 	</div>
 						<div class="row">
@@ -184,12 +190,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<div id="map" class="col-md-9 map"></div>
-				<div class="col-md-3">
+<!--				<div id="map" class="col-md-9 map"></div>-->
+
+				<div class="col-md-4" style="text-align: center;">
 					<h3>Address:</h3>
 					<p>2501 McHenry Ave. Suit B Modesto, CA 95350</p>
+				</div>
+<!--				<div class="col-md-1"></div>-->
+				<div class="col-md-4" style="text-align: center;">
 					<h3>Email:</h3>
 					<p>beautyupgrade1@gmail.com</p>
+				</div>
+<!--				<div class="col-md-1"></div>-->
+				<div class="col-md-4" style="text-align: center;">
 					<h3>Mobile:</h3>
 					<p>(209) 422-6951</p>
 				</div>
@@ -197,7 +210,7 @@
 			<!--- End of Our Location -->
 			<div class="row footer bg-light">
 				<div class="col">
-					<p class="text-center">Follow us: <a class="social-icon" href="https://www.facebook.com/rubiktechnologiesShpk/"><i class="fab fa-facebook"></i></a> <a class="social-icon" href="https://www.instagram.com/rubiktechnologies/"><i class="fab fa-instagram"></i></a></p>
+					<p class="text-center">Follow us: <a class="social-icon" href="https://www.facebook.com/Beauty_Upgrade1-102404001124746/"><i class="fab fa-facebook"></i></a> <a class="social-icon" href="https://www.instagram.com/rubiktechnologies/"><i class="fab fa-instagram"></i></a></p>
 				</div>
 				<div class="col">
 					<p class="text-center">Copyright &copy; 2019</p>
@@ -213,6 +226,7 @@
 		<script type="text/javascript" src="/static/js/smooth-scroll.js"></script>
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 		<script type="text/javascript" src="/static/js/image-effect.js"></script>
+		<script type="text/javascript" src="/static/js/helper.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZjOV0KA68G2YAh-rn7I3qKqCQEh_Ja0&callback=myMap">
 	    </script>
   	</body>

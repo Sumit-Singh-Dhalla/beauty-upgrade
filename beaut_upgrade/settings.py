@@ -16,7 +16,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'newApp/templates/')
-print(os.path.join(BASE_DIR, "newApp/static"))
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "newApp/static"),
@@ -43,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'newApp',
 ]
 

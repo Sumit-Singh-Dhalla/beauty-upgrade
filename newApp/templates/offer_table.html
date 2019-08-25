@@ -1,0 +1,14 @@
+{% if offer_qs %}
+
+    <ul>
+        {% for offer in offer_qs %}
+        <li>
+            {{offer.name}}
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    No offers
+
+{% endif %}
+

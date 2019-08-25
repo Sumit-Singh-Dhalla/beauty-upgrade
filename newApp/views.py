@@ -2,7 +2,9 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.template.loader import render_to_string
 
+from newApp.models import Offer
 from newApp.serializers import ReservationSerializer
 
 
@@ -16,3 +18,10 @@ class MakeReservation(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response("ok")
+
+
+class OfferViewSet(APIView):
+    def get(self, request):
+        offer_qs = Offer.objects.filter(is_active=True)
+        data = render_to_string('offer_table.html', {'offer_qs': offer_qs})
+        return Response(data)

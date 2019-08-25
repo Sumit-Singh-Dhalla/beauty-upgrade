@@ -19,7 +19,7 @@ body{
 }
 .card-body{
 	-webkit-transition: all 1s ease; /* Safari and Chrome */
-  	-moz-transition: all 1s ease; /* Firefox */
+  	-moz-transition: all 1s ease; /* Fir    efox */
   	-o-transition: all 1s ease; /* IE 9 */
   	-ms-transition: all 1s ease; /* Opera */
   	transition: all 1s ease;
@@ -72,7 +72,7 @@ body{
 }
 
 @media screen and (max-width : 506px){
- 
+
  .only-mobile{
   visibility:visible;
   }
@@ -84,11 +84,21 @@ body{
 	padding-top: 20px;
 }
 .social-icon{
-	font-size:28; 
+	font-size:28;
 }
 
 footer{
 	position: fixed;
 	bottom: 0px;
 	padding-top: 20px;
+}
+
+.nav-link-padding{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+}
+
+.offerImg{
+    height: 43px;
 }

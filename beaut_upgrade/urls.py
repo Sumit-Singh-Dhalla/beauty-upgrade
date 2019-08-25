@@ -17,11 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from newApp.views import index, MakeReservation
+from newApp.views import index, MakeReservation, OfferViewSet
 
 urlpatterns = [
     url(r'home', index),
     url(r'reserve', MakeReservation.as_view()),
+    url(r'offers', OfferViewSet.as_view()),
     url(r'^admin/', admin.site.urls),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

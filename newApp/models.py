@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 
 
@@ -14,3 +14,13 @@ class Reservation(models.Model):
 
     def __str__(self):
         return self.name + " " + self.phone
+
+
+class Offer(models.Model):
+    name = models.CharField(max_length=150)
+    coupon = models.CharField(max_length=30)
+    validity = models.DateField(default=timezone.now().date())
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name + " - " + self.coupon

@@ -15,9 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'newApp/templates/')
 STATICFILES_DIR = [
-    os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "newApp/static"),
 
 ]
@@ -62,7 +60,7 @@ ROOT_URLCONF = 'beaut_upgrade.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

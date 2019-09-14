@@ -4,12 +4,14 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.template.loader import render_to_string
 
-from newApp.models import Offer
+from newApp.models import Offer, Gallery
 from newApp.serializers import ReservationSerializer
 
 
-def index(request):
-    return render(request, template_name='index.html', context={})
+class IndexViewSet(APIView):
+    def get(self, request):
+        images_qs = Gallery.objects.all()
+        return render(request, template_name='index.html', context={'images_qs': images_qs})
 
 
 class MakeReservation(APIView):

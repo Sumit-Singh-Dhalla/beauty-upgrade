@@ -24,3 +24,11 @@ class Offer(models.Model):
 
     def __str__(self):
         return self.name + " - " + self.coupon
+
+
+class Gallery(models.Model):
+    image = models.ImageField()
+    position = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return self.image.url
